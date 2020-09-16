@@ -1,11 +1,11 @@
 <template>
   <div class="manga">
     <v-container>
+      <h1>Series de Manga</h1>
        <v-row>
-         <v-col>
-      <h1>Contenido de Manga</h1>
-      <h1>{{mangas.results}}</h1>
-      </v-col>
+        <v-col>
+          <h1>{{mangas}}</h1>
+        </v-col>
       </v-row>
     </v-container>
   </div>

@@ -27,23 +27,23 @@ export default new Vuex.Store({
   },
   actions: {
     getMangas({ commit }) {
-      Axios.get('https://api.jikan.moe/v3/search/anime?q=anime').then((response) => {
-        commit('GET_MANGAS', response.data)
+      Axios.get('https://api.jikan.moe/v3/search/manga?q=manga').then((response) => {
+        commit('GET_MANGAS', response.data.results)
       })
     },
     getManga({ commit, }) {
-      Axios.get('https://api.jikan.moe/v3/search/anime?q=anime').then((response) => {
-        commit('GET_MANGA', response.data)
+      Axios.get('https://api.jikan.moe/v3/search/manga?q=manga').then((response) => {
+        commit('GET_MANGA', response.data.results)
       })
     },
     getAnimes({ commit }) {
-      Axios.get('https://api.jikan.moe/v3/search/manga?q=manga').then((response) => {
-        commit('GET_ANIMES', response.data)
+      Axios.get('https://api.jikan.moe/v3/search/anime?q=anime').then((response) => {
+        commit('GET_ANIMES', response.data.results)
       })
     },
     getAnime({ commit, }) {
       Axios.get('https://api.jikan.moe/v3/search/manga?q=manga').then((response) => {
-        commit('GET_ANIME', response.data)
+        commit('GET_ANIME', response.data.results)
       })
     }
   },
